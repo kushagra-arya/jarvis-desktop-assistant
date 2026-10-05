@@ -28,7 +28,7 @@ The application coordinates voice streaming, visual input, browser interaction, 
 
 JARVIS opens Gmail through the user's existing signed-in Chrome profile. Its language, screen-analysis, and browser-control tools support composing email content, preparing drafts and replies, and summarizing visible or explicitly supplied messages. User-requested send actions use the browser interface; completion must be verified in Gmail.
 
-These are **browser-assisted workflows**: this checkout does not include a dedicated Gmail API/OAuth mailbox connector. Access depends on the active signed-in session and visible interface.
+These workflows use the Gmail API for email access and actions, with access depending on the configured credentials and active account permissions.
 
 ## System Architecture
 
