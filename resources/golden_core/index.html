@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JARVIS Core</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html, body, #jarvis-golden-preview, .g-stage {
+      width: 100%; height: 100%; margin: 0; overflow: hidden;
+      background: #060609;
+    }
+    #jarvis-golden-preview .g-stage { position: relative; width: 100%; height: 100%; }
+    .g-canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: none; }
+    .g-canvas:active { cursor: grabbing; }
+    .g-loading {
+      position: absolute; top: 48%; width: 100%;
+      text-align: center; color: #d5bd99; font: 13px "Segoe UI", sans-serif;
+    }
+    #jarvis-golden-preview .g-status,
+    #jarvis-golden-preview .g-detail,
+    #jarvis-golden-preview .j-wave,
+    #jarvis-golden-preview .g-modes,
+    #jarvis-golden-preview .j-sequence { display: none; }
+  </style>
+</head>
+<body>
+  <div id="jarvis-golden-preview">
+    <div class="g-stage">
+      <canvas class="g-canvas" aria-label="Animated JARVIS holographic core"></canvas>
+      <div class="g-loading" role="status">Initializing hologram...</div>
+    </div>
+    <div class="g-status"><span class="g-dot"></span><span class="j-state-name">Idle</span></div>
+    <p class="g-detail"></p>
+    <div class="j-wave"></div>
+    <nav class="g-modes">
+      <button data-state="idle"></button><button data-state="listening"></button>
+      <button data-state="thinking"></button><button data-state="speaking"></button>
+      <button data-state="sleeping"></button>
+    </nav>
+    <button class="j-sequence"></button>
+  </div>
+  <script src="vendor/three.min.js"></script>
+  <script src="core.js"></script>
+</body>
+</html>
